@@ -11,5 +11,7 @@ jobs:
       last_name: Medina
     steps:
       - name: say my full name
-        run: echo $FIRST_NAME $last_name and also ${{github.ref}} and my age ${{ toJson(github) }}
+        env:
+           GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo $FIRST_NAME $last_name and also ${{github.ref}} and my age $GITHUB_CONTEXT
         shell: sh
