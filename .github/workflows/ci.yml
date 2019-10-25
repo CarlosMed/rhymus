@@ -1,1 +1,2 @@
 name: "Creating a Github Page"
+on: push
