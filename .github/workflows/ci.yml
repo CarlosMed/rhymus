@@ -11,5 +11,5 @@ jobs:
       last_name: Medina
     steps:
       - name: say my full name
-        run: echo $FIRST_NAME $last_name and also ${{github}}
+        run: echo $FIRST_NAME ${{last_name}} and also ${{github}}
         shell: sh
